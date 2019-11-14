@@ -55,8 +55,16 @@ class Semester
     //write setters and getters for the other non constant member varibles 
 
     //calculate tution
+    double calculateTuition()
+    {
+      return (hoursTheStudentTakes * costPerCreditHour); 
+    }
 
-    //calculate room and room and room and Board
+    //calculate room and board
+    double calculateRoomAndBoard()
+    {
+      return (monthsInOneSemester * roomAndBoardCosts); 
+    }
 
     //caculate travel
 
@@ -67,6 +75,12 @@ class Semester
     //calcualte and return semester costs 
 
     //print Semester 
+
+    //calculate total cost per semester
+    double calculateTotalCostPerSemester()
+    {
+      return ( calculateTuition() + calculateRoomAndBoard() ); 
+    }
 };
 
 int main() 
@@ -95,7 +109,25 @@ int main()
    Semester htCollege(hoursAHalfTimeStudent, 60, "TCU", 1565.00, 100.00, 1000.00, 150.00, 90.00); 
    //pass Semester Objects by reference to display summary results via function 
 
-    
+   //calcuate and display tuition for each object in the program 
+   cout << ftTCC.calculateTuition() << endl; 
+   cout << ptTCC.calculateTuition() << endl; 
+   cout << htTCC.calculateTuition() << endl; 
+   cout << ftCollege.calculateTuition() << endl; 
+   cout << ptCollege.calculateTuition() << endl; 
+   cout << htCollege.calculateTuition() << endl; 
 
+   
+   //calculate and display room and board costs for each object in the program 
+   cout << ftTCC.calculateRoomAndBoard() << endl; 
+   cout << ptTCC.calculateRoomAndBoard() << endl; 
+   cout << htTCC.calculateRoomAndBoard() << endl; 
+   cout << ftCollege.calculateRoomAndBoard() << endl; 
+   cout << ptCollege.calculateRoomAndBoard() << endl; 
+   cout << htCollege.calculateRoomAndBoard() << endl; 
+
+ //calculate the respective cost per semester for each student type
+  cout << ftTCC.calculateTotalCostPerSemester() << endl; 
+ 
   return 0; 
 }
