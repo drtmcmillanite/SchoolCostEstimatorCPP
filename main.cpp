@@ -31,7 +31,7 @@ class Semester
     double foodCostsPerMonth; 
     double travelCostsPerMonth; 
   public:
-    Semester() //default constructor
+    Semester() //default constructor TCC
     {
         //user changeable settings default values
         hoursTheStudentTakes = 0; //ft 12, pt 9, ht 6
@@ -39,7 +39,7 @@ class Semester
         schoolName = "TCC"; 
         costPerCreditHour = 64.00; 
         bookCostsPerClass = 100.00;
-        roomAndBoardCosts = 400.00; 
+        roomAndBoardCosts = 1000.00; 
         foodCostsPerMonth = 150.00; 
         travelCostsPerMonth = 90.00; 
     } 
@@ -89,7 +89,10 @@ int main()
    //allow the user to populate the paramerterized constuctor
    //ask for the values, and pass them as arguments. 
    //print the results 
-
+    //Semester(int hTST, int hID, string sN, double cPCH, double bCPC, double rABC, double fCPM, double tCPM) 
+   Semester ftCollege(hoursAFullTimeStudent, 60, "TCU", 1565.00, 100.00, 1000.00, 150.00, 90.00); 
+   Semester ptCollege(hoursAPartTimeStudent, 60, "TCU", 1565.00, 100.00, 1000.00, 150.00, 90.00); 
+   Semester htCollege(hoursAHalfTimeStudent, 60, "TCU", 1565.00, 100.00, 1000.00, 150.00, 90.00); 
    //pass Semester Objects by reference to display summary results via function 
 
     
