@@ -5,7 +5,13 @@ Nov 14, 2019
 #include <iostream>
 #include <string>
 using namespace std; 
-
+/*
+Implementation of Option 4 Keep it Simple	
+class	Semester
+int main	3 instances of semester ft, pt, ht
+int main has constant	Declare constants for all those constants values, semstersInAYear, hoursPerClass,
+	Ask the user to populate the constants
+*/
 int main() 
 {
   cout << "Hello World!\n";
