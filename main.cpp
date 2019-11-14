@@ -42,19 +42,57 @@ class Semester
         roomAndBoardCosts = 400.00; 
         foodCostsPerMonth = 150.00; 
         travelCostsPerMonth = 90.00; 
-    }
+    } 
+    //paramerterize constructor with initizlier list
+    Semester(int hTST, int hID, string sN, double cPCH, double bCPC, double rABC, double fCPM, double tCPM) : 
+    hoursTheStudentTakes(hTST), hoursInTheDegree(hID),
+    schoolName(sN), costPerCreditHour(cPCH),
+    bookCostsPerClass(bCPC), roomAndBoardCosts(rABC),
+    foodCostsPerMonth(fCPM), travelCostsPerMonth(tCPM)
+    { }
+    void setHoursAStudentTakes(int h) { hoursTheStudentTakes = h; }
+    int getHoursAStudentTakes() const { return hoursTheStudentTakes; }
+    //write setters and getters for the other non constant member varibles 
+
+    //calculate tution
+
+    //calculate room and room and room and Board
+
+    //caculate travel
+
+    //calculate food
+
+    //calcualte books
+
+    //calcualte and return semester costs 
+
+    //print Semester 
 };
 
 int main() 
 {
+    //local assumptions for user input
+    const int hoursAFullTimeStudent = 12;
+    const int hoursAPartTimeStudent = 9;
+    const int hoursAHalfTimeStudent = 6;
+   
    //instances of the 3 types of semesters
-   Semester ft;
-   Semester pt;
-   Semester ht; 
+   Semester ftTCC; //call default constructor
+   Semester ptTCC; //calls default constuctor 
+   Semester htTCC; //call default constructor
 
-   static const int hoursAFullTimeStudent = 12;
-    static const int hoursAPartTimeStudent = 9;
-    static const int hoursAHalfTimeStudent = 6;
+   //set hours a student a student takes per semester types
+   ftTCC.setHoursAStudentTakes(hoursAFullTimeStudent);
+   ptTCC.setHoursAStudentTakes(hoursAPartTimeStudent);
+   htTCC.setHoursAStudentTakes(hoursAHalfTimeStudent);
+
+   //allow the user to populate the paramerterized constuctor
+   //ask for the values, and pass them as arguments. 
+   //print the results 
+
+   //pass Semester Objects by reference to display summary results via function 
+
+    
 
   return 0; 
 }
